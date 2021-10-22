@@ -48,8 +48,8 @@ We populate our database with all the information transmitted by the client. We 
 One of the main ideas of our project was to use the interoperability between the SQL Database and the Visual Studio environment to create a convenient application.
 
 <p align="left"> 
-  <img src=https://user-images.githubusercontent.com/63778269/138359063-cf808d32-af25-408c-994b-5203cd1c5f6f.gif height=280/>
-  <img src=https://user-images.githubusercontent.com/63778269/138359072-c07541b5-2cf2-4883-bb21-9f50cc1f5b86.gif height=230/>
+  <img src=https://user-images.githubusercontent.com/63778269/138359063-cf808d32-af25-408c-994b-5203cd1c5f6f.gif height=250/>
+  <img src=https://user-images.githubusercontent.com/63778269/138359072-c07541b5-2cf2-4883-bb21-9f50cc1f5b86.gif height=200/>
 </p>
 
 The employee of the company can make an order for a bike or a square part at any time with a real-time validation of the available stock. If a client purchases a bicycle, the system will check whether the bicycle is available or if it can be assembled with square parts. If the bicycle or the spare parts are not available, the system will automatically order the missing parts or bicycle. It is possible to choose the supplier depending of the delay of delivery or the price.
@@ -61,8 +61,8 @@ The employee of the company can make an order for a bike or a square part at any
 To have a better understanding of the company’s results and flux, we created an easy-to-use statistical study uploaded in real-time in our final application. This includes an analysis of the orders (mean for a specific bike or the total price for example) and the previous clients. The demo mode is a small presentation of what our WPF application can do and display.
 
 <p align="left"> 
-  <img src=https://user-images.githubusercontent.com/63778269/138359041-3b4617f9-d43b-47a7-9bb7-9f4d68e5bd5e.gif height=250/>
-  <img src=https://user-images.githubusercontent.com/63778269/138359058-0462c636-0d77-480e-b03b-00f253bdd9d4.gif height=250/>
+  <img src=https://user-images.githubusercontent.com/63778269/138359041-3b4617f9-d43b-47a7-9bb7-9f4d68e5bd5e.gif height=215/>
+  <img src=https://user-images.githubusercontent.com/63778269/138359058-0462c636-0d77-480e-b03b-00f253bdd9d4.gif height=215/>
 </p>
 
 Finally, at any time the administrator can export one of the tables in a JSON format or the pieces near sold out in an XML format.
