@@ -1,0 +1,129 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <numP>C01</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo au carre,Expert Bike,Deux roues Premium</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>180,170,170</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>5,8,6</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>C15</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo au carre,Expert Bike</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>70,80</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>6,3</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>C25</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo For You,Deux roues Premium</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>100,120</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>5,10</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>C76</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo For You,Deux roues Premium</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>250,300</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>4,12</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>DR23</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo au carre,Expert Bike</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>7,8</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>6,3</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>DR52</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo au carre,Expert Bike,Deux roues Premium</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>24,26,28</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>9,5,2</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>DR76</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo For You,Expert Bike</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>59,55</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>8,4</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>DV133</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo au carre</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>45</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>3</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>DV15</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo For You,Velo au carre,Deux roues Premium</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>40,50,30</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>4,6,12</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>DV17</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo For You,Deux roues Premium</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>100,120</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>5,10</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>F9</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo au carre,Expert Bike,Deux roues Premium</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>45,35,50</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>10,4,5</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>G12</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo For You,Velo au carre,Deux roues Premium</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>40,50,30</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>4,6,12</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>G7</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo For You,Velo au carre</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>30,50</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>4,6</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>P15</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo For You,Deux roues Premium</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>35,36</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>7,5</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>R09</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo For You,Deux roues Premium</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>4,3</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>4,12</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>R11</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo For You,Expert Bike</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>30,37</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>13,6</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>R44</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo au carre,Expert Bike,Deux roues Premium</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>18,17,17</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>5,8,6</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>R45</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo For You,Deux roues Premium</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>20,32</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>5,10</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>S03</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo au carre,Expert Bike,Deux roues Premium</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>18,17,17</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>5,8,6</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>S34</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo For You,Expert Bike</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>590,595</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>8,4</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+  <Table>
+    <numP>S37</numP>
+    <GROUP_CONCAT_x0028_nomf_x0029_>Velo For You,Expert Bike</GROUP_CONCAT_x0028_nomf_x0029_>
+    <group_concat_x0028_prixf_x0029_>30,36</group_concat_x0028_prixf_x0029_>
+    <GROUP_CONCAT_x0028_delai_x0029_>13,6</GROUP_CONCAT_x0028_delai_x0029_>
+  </Table>
+</NewDataSet>

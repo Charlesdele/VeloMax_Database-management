@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF4B1F62-FA26-4EA2-9D95-145D8927F52C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VeloMax_Debes_Delemazure</RootNamespace>
+    <AssemblyName>VeloMax_Debes_Delemazure</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="XamlAnimatedGif, Version=1.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\XamlAnimatedGif.1.2.3\lib\net45\XamlAnimatedGif.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AddEdit_adresse.xaml.cs">
+      <DependentUpon>AddEdit_adresse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEdit_boutique.xaml.cs">
+      <DependentUpon>AddEdit_boutique.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEdit_client.xaml.cs">
+      <DependentUpon>AddEdit_client.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEdit_commande.xaml.cs">
+      <DependentUpon>AddEdit_commande.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEdit_fournisseur.xaml.cs">
+      <DependentUpon>AddEdit_fournisseur.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEdit_piece.xaml.cs">
+      <DependentUpon>AddEdit_piece.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddEdit_velo.xaml.cs">
+      <DependentUpon>AddEdit_velo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Adresse.cs" />
+    <Compile Include="Boutique.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Commande.cs" />
+    <Compile Include="Connexion.xaml.cs">
+      <DependentUpon>Connexion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demo.xaml.cs">
+      <DependentUpon>Demo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fournisseur.cs" />
+    <Compile Include="if_piecemanquante.xaml.cs">
+      <DependentUpon>if_piecemanquante.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Module_stat.xaml.cs">
+      <DependentUpon>Module_stat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Passer_commande.xaml.cs">
+      <DependentUpon>Passer_commande.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reader.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="Velo.cs" />
+    <Page Include="AddEdit_adresse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEdit_boutique.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEdit_client.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEdit_commande.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEdit_fournisseur.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEdit_piece.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddEdit_velo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Connexion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Demo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="if_piecemanquante.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Module_stat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Passer_commande.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Piece.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Fonts\Roboto.ttf" />
+    <Resource Include="Fonts\Marker.ttf" />
+    <Resource Include="Fonts\Kanit-Black.ttf" />
+    <Resource Include="Fonts\BebasNeue-Regular.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bike.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bicycle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bike2.gif" />
+    <Resource Include="Resources\bike3.gif" />
+    <Resource Include="Resources\wheel_loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\vague.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\full_speed.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\croix.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

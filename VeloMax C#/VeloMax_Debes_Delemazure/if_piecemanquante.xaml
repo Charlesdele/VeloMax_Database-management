@@ -1,0 +1,370 @@
+﻿<Window x:Class="VeloMax_Debes_Delemazure.if_piecemanquante"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VeloMax_Debes_Delemazure"
+        mc:Ignorable="d"
+        Title="if_piecemanquante" Height="250" Width="650"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Window.Resources>
+        <Style x:Key="ComboBoxToggleButton" TargetType="ToggleButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="35"/>
+                            </Grid.ColumnDefinitions>
+                            <Border
+                          x:Name="Border"
+                          Grid.ColumnSpan="2"
+                          CornerRadius="8"
+                          Background="{TemplateBinding Background}"
+                          BorderBrush="{x:Null}"
+                          BorderThickness="1" 
+                        />
+
+                            <Path
+                            x:Name="Arrow"
+                            Grid.Column="1"    
+                            Fill="{TemplateBinding Foreground}"
+                            Stroke="{TemplateBinding Foreground}"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Data="M 0 0 L 4 4 L 8 0 Z"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <ControlTemplate x:Key="ComboBoxTextBox" TargetType="TextBox">
+            <Border x:Name="PART_ContentHost" Focusable="True" />
+        </ControlTemplate>
+        <Style x:Key="theComboBox" TargetType="{x:Type ComboBox}">
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="#EEEEEC" />
+            <Setter Property="Background" Value="#EEEEEC" />
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="Black"/>
+            <Setter Property="MinWidth" Value="140"/>
+            <Setter Property="MinHeight" Value="30"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <ToggleButton
+                            Cursor="Hand"
+                            Name="ToggleButton"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            Background="{TemplateBinding Background}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Style="{StaticResource ComboBoxToggleButton}"
+                            Grid.Column="2"
+                            Focusable="false"
+                            IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"
+                            ClickMode="Press"/>
+
+                            <ContentPresenter
+                            Name="ContentSite"
+                            IsHitTestVisible="False"
+                            Content="{TemplateBinding SelectionBoxItem}"
+                            ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                            ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                            Margin="10,3,30,3"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left" />
+                            <TextBox x:Name="PART_EditableTextBox"
+                            Style="{x:Null}"
+                            Template="{StaticResource ComboBoxTextBox}"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Margin="3,3,23,3"
+                            Focusable="True"                               
+                            Visibility="Hidden"
+                            IsReadOnly="{TemplateBinding IsReadOnly}"/>
+                            <Popup
+                            Name="Popup"
+                            Placement="Bottom"
+                            IsOpen="{TemplateBinding IsDropDownOpen}"
+                            AllowsTransparency="True"
+                            Focusable="False"
+                            PopupAnimation="Slide">
+                                <Grid
+                              Name="DropDown"
+                              SnapsToDevicePixels="True"               
+                              MinWidth="{TemplateBinding ActualWidth}"
+                              MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <Border
+                                    CornerRadius="8"
+                                    x:Name="DropDownBorder"
+                                    Background="#EEEEEC"
+                                    BorderThickness="1"
+                                    BorderBrush="#EEEEEC"
+                                    />
+                                    <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
+                                        <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                    </ScrollViewer>
+                                </Grid>
+                            </Popup>
+
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="HasItems" Value="false">
+                                <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95"/>
+                            </Trigger>
+                            <Trigger Property="IsGrouping" Value="true">
+                                <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                            </Trigger>
+                            <Trigger Property="IsEditable" Value="true">
+                                <Setter Property="IsTabStop" Value="false"/>
+                                <Setter TargetName="PART_EditableTextBox" Property="Visibility" Value="Visible"/>
+                                <Setter TargetName="ContentSite" Property="Visibility" Value="Hidden"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="theComboBoxItem" TargetType="{x:Type ComboBoxItem}">
+            <Setter Property="SnapsToDevicePixels" Value="true" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="FontSize" Value="11" />
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="FontFamily" Value="Elephant"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBoxItem">
+                        <Border
+                        Name="Border"
+                        Padding="5"
+                        Margin="2"
+                        BorderThickness="2,0,0,0"
+                        CornerRadius="0"
+                        Background="White"
+                        BorderBrush="White">
+                            <TextBlock TextAlignment="Left">
+                            <ContentPresenter />
+                            </TextBlock>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsHighlighted" Value="false">
+                                <Setter TargetName="Border" Property="BorderBrush" Value="#EEEEEC"/>
+                                <Setter TargetName="Border" Property="Background" Value="#EEEEEC"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Border CornerRadius="30"
+            Background="White">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80">
+                    
+                </RowDefinition>
+                <RowDefinition>
+                    
+                </RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="COMMANDER PIECE MANQUANTE"
+                       FontSize="35"
+                       Foreground="Black"
+                       VerticalAlignment="Center"
+                       Margin="20,0,0,0" 
+                       FontFamily="/VeloMax_Debes_Delemazure;component/Fonts/#Permanent Marker"
+                       Grid.Row="0"/>
+
+            <StackPanel Orientation="Horizontal"
+                        Grid.Row="1">
+
+                <TextBlock Text="Piece"
+                           Foreground="Black"
+                           FontSize="22"
+                           Margin="20,40,0,0" 
+                           FontFamily="/VeloMax_Debes_Delemazure;component/Fonts/#Roboto Mono Thin">
+                </TextBlock>
+
+                <ComboBox VerticalAlignment="Center"
+                         FontSize="15"
+                         Background="LightGray"
+                         FontWeight="Medium"
+                         Margin="25,10,0,70"
+                         Width="155"
+                         x:Name="menu_piece"
+                         Style="{StaticResource theComboBox}"
+                         Text="ID Client"
+                         Foreground="Black"/>
+
+                <TextBlock Text="Fournisseur"
+                           Foreground="Black"
+                           FontSize="22"
+                           Margin="20,40,0,0" 
+                           FontFamily="/VeloMax_Debes_Delemazure;component/Fonts/#Roboto Mono Thin">
+                </TextBlock>
+
+                <ComboBox VerticalAlignment="Center"
+                         FontSize="15"
+                         Background="LightGray"
+                         FontWeight="Medium"
+                         Margin="25,10,0,70"
+                         Width="155"
+                         x:Name="menu_fournisseur"
+                         Style="{StaticResource theComboBox}"
+                         Text="ID Client"
+                         Foreground="Black"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="1"
+                        Orientation="Horizontal">
+
+                <Button Content="Fermer"
+                        Foreground="White"
+                        FontSize="14"
+                        FontWeight="Medium"
+                        Margin="300,120,0,0"
+                        Click="Quitter">
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Roboto"/>
+                            <Setter Property="Background" Value="#FFA9A9A9"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FFD3D3D3"/>
+                                </Trigger>
+                            </Style.Triggers>
+
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="150" Height="25"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                
+                <Button Content="Valider"
+                        Foreground="White"
+                        FontSize="14"
+                        FontWeight="Medium"
+                        Margin="10,120,0,0"
+                        Click="valider">
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Roboto"/>
+                            <Setter Property="Background" Value="#FFA9A9A9"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#FFD3D3D3"/>
+                                </Trigger>
+                            </Style.Triggers>
+
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="150" Height="25"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="1"
+                        Orientation="Horizontal">
+
+                <TextBlock Text="Mise à jour"
+                           Foreground="Black"
+                           FontSize="15"
+                           Margin="470,70,0,80" 
+                           FontFamily="/VeloMax_Debes_Delemazure;component/Fonts/#Roboto Mono Thin"
+                           Height="20">
+                </TextBlock>
+
+                <Button Content="O"
+                        Foreground="Black"
+                        FontSize="20"
+                        FontWeight="Medium"
+                        Margin="10,0,0,10"
+                        Click="update_fournisseur">
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextElement.FontFamily" Value="Fonts/#Roboto"/>
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                </Trigger>
+                            </Style.Triggers>
+
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="20" Height="30"
+                                    CornerRadius="20"
+                                    Background="{TemplateBinding Background}">
+
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+            </StackPanel>
+
+
+        </Grid>
+
+        
+        
+        
+    </Border>
+</Window>
